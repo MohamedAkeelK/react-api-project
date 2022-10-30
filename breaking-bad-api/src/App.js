@@ -1,44 +1,41 @@
 import { React, useEffect, useState } from "react";
 // import axios from "axios";
-// import Character from "./components/Character";
+import Character from "./components/Character";
 
 export default function App() {
-  const [user, setUser] = useState(null);
+  const [chars, setChars] = useState(null);
 
-  async function fetchUserData() {
+  async function fetchCharsData() {
     const response = await fetch(
       "https://www.breakingbadapi.com/api/characters"
     );
-    setUser(await response.json());
+    setChars(await response.json());
   }
 
   useEffect(() => {
-    fetchUserData();
+    fetchCharsData();
   }, []);
 
-  if (!user) {
+  if (!chars) {
     return "loading...";
   } else {
     console.log("complete");
-    // user.map((item) => {
-    //   return <img src={item.img} />;
-    // });
   }
-  console.log(user.length);
   return (
     <div>
-      {user.map((item, i) => {
-        console.log(item.img);
+      <Character characters={chars} />
+      {/* {chars.map((char, i) => {
+        console.log(char.img);
         return (
           <img
-            src={item.img}
+            src={char.img}
             width="200px"
             height="300px"
             key={i}
-            alt={item.name}
+            alt={char.name}
           />
         );
-      })}
+      })} */}
     </div>
   );
 }

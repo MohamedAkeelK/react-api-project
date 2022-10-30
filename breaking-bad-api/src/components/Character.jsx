@@ -1,23 +1,24 @@
-import React from 'react'
+import React from "react";
 
 export default function Character(props) {
-  // let imgurl = props.img
-  // let name = ""
-  // let img = 
-  if (props) {
-    console.log(props)
-  //  let img = <img src={ props.data[0].img} />
-    // imgurl = props.data[0].img
-    // name = props.data[0].name
+  function handleClick(e) {
+    console.log("clicked: ", e.target.src)
 
   }
   return (
     <div>
-      sdfs
-      {/* <h1>{ name}</h1> */}
-      {/* <img src={imgurl} /> */}
-      {/* { props.img } */}
-   </div>
-
-  )
+      {props.characters.map((char, i) => {
+        return (
+          <img
+            src={char.img}
+            width="200px"
+            height="300px"
+            key={i}
+            alt={char.name}
+            onClick={handleClick}
+          />
+        );
+      })}
+    </div>
+  );
 }
