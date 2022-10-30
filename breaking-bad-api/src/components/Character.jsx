@@ -1,8 +1,6 @@
 import React from "react";
-import Modal from "./Modal";
 
 export default function Character(props) {
-  // console.log(props.img)
   return (
     <div className="char-block">
       <img src={props.img} width="250px" height="300px"/>
@@ -10,6 +8,7 @@ export default function Character(props) {
       <button onClick={() => {
         props.setOpen(true)
         props.setClickedImg(props.img)
+        props.setCharName(props.name)
       }}>See More</button>
     </div>
   );

@@ -5,14 +5,17 @@ export default function Modal(props) {
   return (
     <div className="modal">
       <button
+        className="close-modal"
         onClick={() => {
           props.setOpen(false);
         }}
       >
         CLOSEEEEE
       </button>
-      <h1>Modal</h1>
-      <img src={props.img} width="200px" />
+      <section className="modal-content">
+        <h1>{props.charName}</h1>
+        <img src={props.img} width="200px" />
+      </section>
     </div>
   );
 }
