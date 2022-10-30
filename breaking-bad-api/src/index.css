@@ -31,8 +31,8 @@ code {
 .modal {
   position: absolute;
   z-index: 1000;
-  left: 50%;
-  top: 50%;
+  left: 30vw;
+  top: 10vh;
   width: 500px;
   height: 500px;
   background-color: red;

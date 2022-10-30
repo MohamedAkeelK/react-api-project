@@ -15,7 +15,6 @@ export default function Character(props) {
       <img src={props.img} width="250px" height="300px"/>
       <h5>{props.name}</h5>
       <button onClick={()=> props.setOpen(true)}>See More</button>
-      {/* {<Modal /> && props.open} */}
     </div>
   );
 }

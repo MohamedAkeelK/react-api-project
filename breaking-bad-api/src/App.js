@@ -36,10 +36,10 @@ export default function App() {
               open={open}
               setOpen={setOpen}
             />
-            {open && <Modal />}
           </div>
         );
       })}
+      {open && <Modal setOpen={setOpen} />}
     </div>
   );
 }
