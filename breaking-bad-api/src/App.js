@@ -1,5 +1,4 @@
 import { React, useEffect, useState } from "react";
-// import axios from "axios";
 import Character from "./components/Character";
 import Modal from "./components/Modal";
 
