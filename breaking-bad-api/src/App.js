@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from "react";
 // import axios from "axios";
-import Character from "./components/Character";
+import Characters from "./components/Characters";
 
 export default function App() {
   const [chars, setChars] = useState(null);
@@ -23,19 +23,10 @@ export default function App() {
   }
   return (
     <div>
-      <Character characters={chars} />
-      {/* {chars.map((char, i) => {
+      {chars.map((char, i) => {
         console.log(char.img);
-        return (
-          <img
-            src={char.img}
-            width="200px"
-            height="300px"
-            key={i}
-            alt={char.name}
-          />
-        );
-      })} */}
+        return <Characters img={char.img} name={char.name} key={i} />;
+      })}
     </div>
   );
 }
