@@ -1,9 +1,11 @@
 import { React, useEffect, useState } from "react";
 // import axios from "axios";
 import Character from "./components/Character";
+import Modal from "./components/Modal";
 
 export default function App() {
   const [chars, setChars] = useState(null);
+  const [open, setOpen] = useState(false);
 
   async function fetchCharsData() {
     const response = await fetch(
@@ -21,11 +23,22 @@ export default function App() {
   } else {
     console.log("complete");
   }
+
   return (
     <div className="char-section">
       {chars.map((char, i) => {
-        console.log(char.img);
-        return <Character img={char.img} name={char.name} key={i} />;
+        return (
+          <div>
+            <Character
+              img={char.img}
+              name={char.name}
+              key={i}
+              open={open}
+              setOpen={setOpen}
+            />
+            {open && <Modal />}
+          </div>
+        );
       })}
     </div>
   );
