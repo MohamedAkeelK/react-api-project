@@ -3,7 +3,6 @@ import { React } from "react";
 export default function Modal(props) {
   return (
     <div className="modal">
-      <h1>Modal</h1>
       <button
         onClick={() => {
           props.setOpen(false);
@@ -11,6 +10,8 @@ export default function Modal(props) {
       >
         CLOSEEEEE
       </button>
+      <h1>Modal</h1>
+      <img src={props.img}></img>
     </div>
   );
 }
