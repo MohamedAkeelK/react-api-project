@@ -1,6 +1,7 @@
 import { React } from "react";
 
 export default function Modal(props) {
+  console.log("hereddd ", props);
   return (
     <div className="modal">
       <button
@@ -11,7 +12,7 @@ export default function Modal(props) {
         CLOSEEEEE
       </button>
       <h1>Modal</h1>
-      <img src={props.img}></img>
+      <img src={props.img} width="200px" />
     </div>
   );
 }
