@@ -1,7 +1,7 @@
 import { React } from "react";
 
 export default function Modal(props) {
-  console.log("hereddd ", props);
+  console.log("hereddd ", props.birthday);
   return (
     <div className="modal">
       <button
@@ -10,11 +10,14 @@ export default function Modal(props) {
           props.setOpen(false);
         }}
       >
-        CLOSEEEEE
+        CLOSE
       </button>
       <section className="modal-content">
-        <h1>{props.charName}</h1>
+        <h1>Name: {props.charName}</h1>
         <img src={props.img} width="200px" />
+        <h2>Birthday: {props.birthday}</h2>
+        <h2>Nickname: {props.nickName}</h2>
+        <h2>Portrayed: {props.portrayed}</h2>
       </section>
     </div>
   );

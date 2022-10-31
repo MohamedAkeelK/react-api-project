@@ -9,6 +9,11 @@ export default function Character(props) {
         props.setOpen(true)
         props.setClickedImg(props.img)
         props.setCharName(props.name)
+        props.setBirthday(props.birthday)
+        props.setNickName(props.nickName)
+        props.setPortrayed(props.portrayed)
+
+
       }}>See More</button>
     </div>
   );
