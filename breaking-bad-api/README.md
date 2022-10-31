@@ -1,4 +1,4 @@
-# API-DUMMY-USERS
+# Breaking bad api react project
 
 This project is a react app that displays the breaking bad characters pulling information from https://breakingbadapi.com
 
