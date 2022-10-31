@@ -27,7 +27,15 @@ export default function App() {
     console.log("complete");
   }
 
-  console.log(chars);
+  chars[13].img =
+    "https://www.rollingstone.com/wp-content/uploads/2018/06/rs-18051-breakingbad-624-1380209485.jpg";
+
+  chars[16].img =
+    "https://oyster.ignimgs.com/mediawiki/apis.ign.com/breaking-bad/e/e2/Skinny_Pete.jpg";
+
+  chars[38].img =
+    "https://external-preview.redd.it/AGoRf6tSmKYoGxRFj6RevVEmLlp9Z5hdWOj9aZ3I7Qc.jpg?auto=webp&s=ea73d28e012c05fba8cce7ad1f2a0ec83ceb64bf";
+
   return (
     <div>
       <Header />
